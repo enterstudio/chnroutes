@@ -59,7 +59,7 @@ if [[ $1 = -r ]]; then
 	fi
 
 	msg '\x1b[32mGenrate route files:\x1b[0m'
-	cat > $up <<EOF
+	cat <<EOF > $up
 #!/bin/sh
 #
 # Generated on $date by chnroutes
@@ -73,7 +73,7 @@ ip r d default
 
 ip -b - <<EOF
 EOF
-	cat > $down <<EOF
+	cat <<EOF > $down
 #!/bin/sh
 #
 # Generated on $date by chnroutes
